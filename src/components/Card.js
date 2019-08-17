@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Card = ({
-    href,
+const Card = (props) => {
+  
+    const addNewItem = (item) =>{
+       
+    } 
+   const { href,
     ingredients,
     thumbnail,
-    title
-}) => {
-  
-   const recipe = ingredients.split(',');
+    title} = props;
+
+    const recipe = ingredients.split(',')
  
     return(
         <div className="cards">
@@ -18,7 +21,7 @@ const Card = ({
                 {
                     recipe.map(item=>(
                         <button
-                       
+                       onClick={addNewItem(item)}
                         >
                         <li className="li">{item}</li>
                         </button>

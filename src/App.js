@@ -7,6 +7,13 @@ import Card from './components/Card'
 
 const App = () => {
   const [response,setresponse] = useState([]);
+  const [url,setUrl] = useState();
+
+  const addnewitem = (item) =>{
+    console.log('Item',item);
+    
+    
+  }
 
   const handelInputClick = text => {
     console.log(text);
@@ -47,6 +54,7 @@ const App = () => {
            ingredients = {item.ingredients}
            thumbnail = {item.thumbnail}
            title = {item.title}
+           addnewitem={addnewitem(item)}
          />
        ))
      }
