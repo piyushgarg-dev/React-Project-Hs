@@ -7,6 +7,7 @@ import Card from './components/Card'
 
 const App = () => {
   const [response,setresponse] = useState([]);
+
   const handelInputClick = text => {
     console.log(text);
     const query = text.split(',');
@@ -41,7 +42,7 @@ const App = () => {
      {
        response.map(item=>(
          <Card
-         key={item.href}
+           key={item.href}
            href = {item.href}
            ingredients = {item.ingredients}
            thumbnail = {item.thumbnail}
